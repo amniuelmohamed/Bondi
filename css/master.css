@@ -2,6 +2,8 @@
     --links-purple-color: #8181fc;
     --links-blue-color: #008acf;
     --text-color: #06004e;
+    --green-color: #38f99cff;
+    --section-padding: 60px;
 }
 
 * {
@@ -67,16 +69,17 @@ a {
 
 /* Start Landing */
 .landing {
-    min-height: calc(100vh - 71px);
-    padding: 60px 0;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
     overflow: hidden;
 }
 
 .landing .text-content {
-    transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0;
     animation-name: fadeInLeft;
     animation-timing-function: ease-in-out;
-    animation-duration: 1.5s;
+    animation-duration: 1s;
     animation-fill-mode: both;
 }
 
@@ -100,22 +103,25 @@ a {
 
 .landing .img-content .layer img {
     max-width: 100%;
-    transform: translate3d(2000px, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
     animation-name: fadeInRight;
-    animation-duration: 0.9s;
     animation-fill-mode: both;
 }
 
 .landing .img-content .layer:first-child img {
     animation-delay: 1s;
+    animation-duration: 1s;
 }
 
 .landing .img-content .layer:nth-child(2) img {
     animation-delay: 2s;
+    animation-duration: 0.5s;
 }
 
 .landing .img-content .layer:last-child img {
     animation-delay: 1.5s;
+    animation-duration: 0.5s;
 }
 
 .landing .img-content .layer:nth-child(2) img {
@@ -149,12 +155,26 @@ a {
 }
 /* End Landing */
 
+/* Start Rating */
+section.rating {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--green-color);
+}
+
+section.rating h4 {
+    line-height: 36px;
+    font-size: 30px;
+    margin-bottom: 28px;
+}
+
+section.rating .box span:first-child {
+    font-size: 60px;
+}
+/* End Rating */
+
 /* Animations */
 @keyframes fadeInRight {
-    from {
-        opacity: 0;
-        transform: translate3d(2000px, 0, 0);
-    }
     to {
         opacity: 1;
         transform: translate3d(0, 0, 0);
@@ -162,10 +182,6 @@ a {
 }
 
 @keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translate3d(-2000px, 0, 0);
-    }
     to {
         opacity: 1;
         transform: translate3d(0, 0, 0);
