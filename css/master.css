@@ -30,6 +30,14 @@ a {
     color: var(--links-blue-color);
 }
 
+.main-heading h5 {
+    font-size: 20px;
+}
+
+.main-heading h4 {
+    font-size: 30px;
+}
+
 /* Start Navbar */
 .navbar {
     background-color: white;
@@ -75,8 +83,6 @@ a {
 }
 
 .landing .text-content {
-    transform: translate3d(-100%, 0, 0);
-    opacity: 0;
     animation-name: fadeInLeft;
     animation-timing-function: ease-in-out;
     animation-duration: 1s;
@@ -103,8 +109,6 @@ a {
 
 .landing .img-content .layer img {
     max-width: 100%;
-    transform: translate3d(100%, 0, 0);
-    opacity: 0;
     animation-name: fadeInRight;
     animation-fill-mode: both;
 }
@@ -173,15 +177,92 @@ section.rating .box span:first-child {
 }
 /* End Rating */
 
+/* Start Features */
+.features {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.features .main-heading {
+    margin-bottom: 75px;
+    opacity: 0;
+}
+
+.features .main-heading.showed {
+    animation-name: fadeIn;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.features .feature {
+    opacity: 0;
+}
+
+.features .feature.showed:first-child {
+    animation-name: fadeInLeft;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.features .feature.showed:nth-child(2) {
+    animation-name: fadeIn;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+.features .feature.showed:last-child {
+    animation-name: fadeInRight;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.features .feature h5 {
+    font-size: 22px;
+}
+
+.features .feature .feature-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px 0px rgba(44, 55, 58, 0.1);
+}
+
+.features .feature .feature-icon img {
+    width: 50px;
+}
+/* End Features */
+
 /* Animations */
+
 @keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }
     to {
         opacity: 1;
         transform: translate3d(0, 0, 0);
     }
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 @keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0);
+    }
     to {
         opacity: 1;
         transform: translate3d(0, 0, 0);
