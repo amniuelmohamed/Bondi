@@ -793,6 +793,103 @@ section.about-us .img-container img.showed:last-child {
 }
 /* End Pricing */
 
+/* Start Newsletter */
+.contact {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.contact .newsletter-image {
+    width: 270px;
+    height: 265px;
+}
+
+.contact .newsletter-image img.showed:first-child {
+    animation-name: fadeInLeft;
+    animation-duration: 0.5s;
+    animation-delay: 0.7s;
+    animation-fill-mode: both;
+}
+
+.contact .newsletter-image img.showed:last-child {
+    animation-name: fadeInLeft;
+    animation-duration: 0.5s;
+    animation-delay: 1.1s;
+    animation-fill-mode: both;
+}
+
+.contact .text-content.showed {
+    animation-name: fadeInRight;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.contact .form input {
+    padding: 20px;
+    outline: none;
+    background-color: #edf2f6;
+    border: none;
+    font-weight: 500;
+}
+
+.contact .form input::placeholder {
+    color: var(--text-color);
+}
+
+@media (max-width: 767px) {
+    .contact .main-btn {
+        padding: 20px;
+    }
+}
+/* End Newsletter */
+
+/* Start Footer */
+footer {
+    padding-top: var(--section-padding);
+    border-top: 2px solid #f6f5f4;
+}
+
+footer .footer-top {
+    padding-bottom: calc(var(--section-padding) / 2);
+    border-bottom: 2px solid #f6f5f4;
+}
+
+footer h5 {
+    font-size: 18px;
+    color: #57576d;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    color: #57576d;
+    font-size: 13px;
+}
+
+footer ul li a {
+    color: #57576d;
+    transition: 0.3s;
+}
+
+footer ul li a:hover {
+    color: var(--links-purple-color);
+}
+
+footer .footer-bottom a svg {
+    width: 20px;
+    height: 20px;
+    color: var(--text-color);
+    transition: 0.3s;
+}
+
+footer .footer-bottom a:hover svg {
+    color: var(--links-purple-color);
+}
+/* End Footer */
+
 /* Animations */
 
 @keyframes fadeInRight {

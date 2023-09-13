@@ -26,7 +26,7 @@ window.addEventListener("scroll", () => {
                 .filter((el) => el.classList.contains("active"))
                 .map((el) => el.classList.remove("active"));
             menuItems[sections.length - 1].classList.add("active");
-        } else if (sec.offsetTop <= document.documentElement.scrollTop + 200) {
+        } else if (sec.offsetTop <= document.documentElement.scrollTop + 300) {
             menuItems
                 .filter((el) => el.classList.contains("active"))
                 .map((el) => el.classList.remove("active"));
